@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F5AAD99-5268-4686-9B42-3B38FB048B8D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>com.bangbits.metering</RootNamespace>
+    <AssemblyName>Metering</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="com\bangbits\metering\logging\ConsoleLoggingBridge.cs" />
+    <Compile Include="com\bangbits\metering\logging\ILoggingBridge.cs" />
+    <Compile Include="com\bangbits\metering\logging\NoOpLoggingBridge.cs" />
+    <Compile Include="com\bangbits\metering\MeterException.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="com\bangbits\metering\protocol\IMeterProtocol.cs" />
+    <Compile Include="com\bangbits\metering\protocol\MeterProtocolIEC61107.cs" />
+    <Compile Include="com\bangbits\metering\protocol\MeterProtocolKMP382.cs" />
+    <Compile Include="com\bangbits\metering\connection\IMeterConnection.cs" />
+    <Compile Include="com\bangbits\metering\connection\SerialMeterConnection.cs" />
+    <Compile Include="com\bangbits\metering\connection\SerialMeterConnectionIEC61107.cs" />
+    <Compile Include="com\bangbits\metering\connection\SerialMeterConnectionKMP382.cs" />
+    <Compile Include="com\bangbits\metering\connection\VirtualSerialMeterConnectionIEC61107_123456.cs" />
+    <Compile Include="com\bangbits\metering\utils\DictionaryExtentions.cs" />
+    <Compile Include="com\bangbits\metering\MainTest.cs" />
+    <Compile Include="com\bangbits\metering\protocol\Registration.cs" />
+    <Compile Include="com\bangbits\metering\protocol\RegistrationProperty.cs" />
+    <Compile Include="com\bangbits\metering\protocol\RegistrationValue.cs" />
+    <Compile Include="com\bangbits\metering\utils\ByteArrayExtensions.cs" />
+    <Compile Include="com\bangbits\metering\utils\ByteExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="com\" />
+    <Folder Include="com\bangbits\" />
+    <Folder Include="com\bangbits\metering\" />
+    <Folder Include="com\bangbits\metering\logging\" />
+    <Folder Include="com\bangbits\metering\protocol\" />
+    <Folder Include="com\bangbits\metering\connection\" />
+    <Folder Include="com\bangbits\metering\utils\" />
+  </ItemGroup>
+</Project>
