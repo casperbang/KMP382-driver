@@ -1,7 +1,7 @@
 KMP382-driver
 =============
 
-Reverse-engneered driver for talking to a serial connected Kamstrup 382 electricity meter
+Driver for talking to a serially connected Kamstrup 685-382 electricity meter
 
 Serial driver to Kamstrup type 685-382 electricity meters using the legacy but open
 IEC1107 protocol as well as the native but propriatary "Kamstrup Meter
