@@ -7,7 +7,7 @@ Serial driver to Kamstrup type 685-382 electricity meters using the legacy but o
 IEC61107 protocol as well as the native but propriatary "Kamstrup Meter
 Protocol", hence forth referred to as the KMP protocol.
 
-The IEC71107 protocol (http://kamstrup.com/media/2105/IEC61107_comprotocol.pdf) allows 
+The IEC61107 protocol (http://kamstrup.com/media/2105/IEC61107_comprotocol.pdf) allows 
 for easy low-speed retrieval of some basic meter properties and might work for other 
 legacy meters from Kamstrup and possible other manufacturers as well. An example output 
 from a Kamstrup 685-382 using this IEC61107 protocol is:
