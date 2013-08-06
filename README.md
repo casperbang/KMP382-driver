@@ -4,7 +4,7 @@ KMP382-driver
 Driver for talking to a serially connected Kamstrup 685-382 electricity meter
 
 Serial driver to Kamstrup type 685-382 electricity meters using the legacy but open
-IEC1107 protocol as well as the native but propriatary "Kamstrup Meter
+IEC61107 protocol as well as the native but propriatary "Kamstrup Meter
 Protocol", hence forth referred to as the KMP protocol.
 
 The IEC71107 protocol (http://kamstrup.com/media/2105/IEC61107_comprotocol.pdf) allows 
